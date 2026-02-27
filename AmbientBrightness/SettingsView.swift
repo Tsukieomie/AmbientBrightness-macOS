@@ -4,10 +4,15 @@
 //
 
 import SwiftUI
+import Combine
 
 struct SettingsView: View {
     @ObservedObject var engine = AutoBrightnessEngine.shared
     @State private var launchAtLogin: Bool = LaunchAtLogin.enabled
+    @State private var now: Date = Date()
+    @State private var timerCancellable: Cancellable?
+    
+    private let tick = Timer.publish(every: 1, on: .main, in: .common)
     
     private var launchAtLoginBinding: Binding<Bool> {
         Binding(
@@ -29,6 +34,12 @@ struct SettingsView: View {
                         statusRow("Ambient sensor", "Available")
                         if let a = engine.lastAmbient {
                             statusRow("Current ambient", "\(Int(a * 100))%")
+                        }
+                        statusRow("Scan interval", String(format: "every %.0f seconds", engine.pollIntervalSeconds))
+                        if let scanDate = engine.lastScanDate {
+                            statusRow("Last scanned", relativeTime(scanDate))
+                        } else if engine.isRunning {
+                            statusRow("Last scanned", "waiting for first scan...")
                         }
                         statusRow(
                             "Keyboard backlight",
@@ -70,7 +81,23 @@ struct SettingsView: View {
         }
         .padding(24)
         .frame(minWidth: 420, minHeight: 460)
-        .onAppear { launchAtLogin = LaunchAtLogin.enabled }
+        .onAppear {
+            launchAtLogin = LaunchAtLogin.enabled
+            now = Date()
+            timerCancellable = tick.connect()
+        }
+        .onReceive(tick) { now = $0 }
+        .onDisappear { timerCancellable?.cancel() }
+    }
+    
+    private func relativeTime(_ date: Date) -> String {
+        let s = Int(-date.timeIntervalSince(now))
+        if s < 5 { return "just now" }
+        if s < 60 { return "\(s)s ago" }
+        let m = s / 60
+        if m < 60 { return "\(m)m ago" }
+        let h = m / 60
+        return "\(h)h ago"
     }
     
     private func statusRow(_ label: String, _ value: String) -> some View {

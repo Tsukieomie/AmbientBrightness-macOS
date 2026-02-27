@@ -12,6 +12,7 @@ final class AutoBrightnessEngine: ObservableObject {
     
     @Published var isRunning = false
     @Published var lastAmbient: Float?
+    @Published var lastScanDate: Date?
     @Published var displayMin: Float = 0.15
     @Published var displayMax: Float = 0.95
     @Published var keyboardMin: Float = 0
@@ -57,9 +58,11 @@ final class AutoBrightnessEngine: ObservableObject {
     private func applyOnce() {
         guard let c = controller, let ambient = c.readAmbientLevel() else {
             lastAmbient = nil
+            lastScanDate = nil
             return
         }
         lastAmbient = ambient
+        lastScanDate = Date()
         
         if adjustDisplay {
             let targetDisplay = BrightnessController.map(ambient: ambient, minBrightness: displayMin, maxBrightness: displayMax)
