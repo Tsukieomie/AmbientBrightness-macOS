@@ -1,0 +1,248 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = { };
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB01 /* AmbientBrightnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB02; };
+		AB03 /* AutoBrightnessEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB04; };
+		AB05 /* BrightnessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB06; };
+		AB07 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08; };
+		AB09 /* DisplayBrightnessBridge.c in Sources */ = {isa = PBXBuildFile; fileRef = AB0A; };
+		AB17 /* AmbientLightHID.c in Sources */ = {isa = PBXBuildFile; fileRef = AB18; };
+		AB1A /* KeyboardBrightnessCoreBrightness.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1B; };
+		AB13 /* LaunchAtLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB14; };
+		AB0B /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0C; };
+		AB0D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB0E; };
+		AB15 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB16; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AB00 /* AmbientBrightness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmbientBrightness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB02 /* AmbientBrightnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbientBrightnessApp.swift; sourceTree = "<group>"; };
+		AB04 /* AutoBrightnessEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoBrightnessEngine.swift; sourceTree = "<group>"; };
+		AB06 /* BrightnessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessController.swift; sourceTree = "<group>"; };
+		AB08 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AB0A /* DisplayBrightnessBridge.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = DisplayBrightnessBridge.c; sourceTree = "<group>"; };
+		AB0C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppKit.framework; sourceTree = SDKROOT; };
+		AB0E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IOKit.framework; sourceTree = SDKROOT; };
+		AB10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB11 /* DisplayBrightnessBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayBrightnessBridge.h; sourceTree = "<group>"; };
+		AB12 /* AmbientBrightness-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AmbientBrightness-Bridging-Header.h"; sourceTree = "<group>"; };
+		AB14 /* LaunchAtLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLogin.swift; sourceTree = "<group>"; };
+		AB16 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ServiceManagement.framework; sourceTree = SDKROOT; };
+		AB18 /* AmbientLightHID.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = AmbientLightHID.c; sourceTree = "<group>"; };
+		AB19 /* AmbientLightHID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmbientLightHID.h; sourceTree = "<group>"; };
+		AB1B /* KeyboardBrightnessCoreBrightness.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardBrightnessCoreBrightness.m; sourceTree = "<group>"; };
+		AB1C /* KeyboardBrightnessCoreBrightness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardBrightnessCoreBrightness.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = ( AB0B, AB0D, AB15 );
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB30 = {
+			isa = PBXGroup;
+			children = ( AB31, AB32, AB33 );
+			sourceTree = "<group>";
+		};
+		AB31 /* AmbientBrightness */ = {
+			isa = PBXGroup;
+			children = (
+				AB02 /* AmbientBrightnessApp.swift */,
+				AB04 /* AutoBrightnessEngine.swift */,
+				AB06 /* BrightnessController.swift */,
+				AB08 /* SettingsView.swift */,
+				AB0A /* DisplayBrightnessBridge.c */,
+				AB11 /* DisplayBrightnessBridge.h */,
+				AB12 /* AmbientBrightness-Bridging-Header.h */,
+				AB18 /* AmbientLightHID.c */,
+				AB19 /* AmbientLightHID.h */,
+				AB1B /* KeyboardBrightnessCoreBrightness.m */,
+				AB1C /* KeyboardBrightnessCoreBrightness.h */,
+				AB14 /* LaunchAtLogin.swift */,
+				AB10 /* Info.plist */,
+			);
+			path = AmbientBrightness;
+			sourceTree = "<group>";
+		};
+		AB32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = ( AB0C, AB0E, AB16 );
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB33 /* Products */ = {
+			isa = PBXGroup;
+			children = ( AB00 /* AmbientBrightness.app */ );
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB40 /* AmbientBrightness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB50;
+			buildPhases = ( AB41, AB42, AB20 );
+			buildRules = ( );
+			dependencies = ( );
+			name = AmbientBrightness;
+			productName = AmbientBrightness;
+			productReference = AB00 /* AmbientBrightness.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB60 /* Project object */ = {
+			isa = PBXProject;
+			attributes = { BuildIndependentTargetsInParallel = 1; LastUpgradeCheck = 1500; };
+			buildConfigurationList = AB61;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = ( en, Base );
+			mainGroup = AB30;
+			productRefGroup = AB33;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = ( AB40 );
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = ( );
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = ( AB01, AB03, AB05, AB07, AB09, AB13, AB17, AB1A );
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AB70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ( "DEBUG=1", "$(inherited)" );
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AB71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		AB72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = AmbientBrightness/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright 2025.";
+				LD_RUNPATH_SEARCH_PATHS = ( "$(inherited)", "@executable_path/../Frameworks" );
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ambientbrightness.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_BRIDGING_HEADER = "AmbientBrightness/AmbientBrightness-Bridging-Header.h";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AB73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = AmbientBrightness/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright 2025.";
+				LD_RUNPATH_SEARCH_PATHS = ( "$(inherited)", "@executable_path/../Frameworks" );
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ambientbrightness.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_BRIDGING_HEADER = "AmbientBrightness/AmbientBrightness-Bridging-Header.h";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB50 = {
+			isa = XCConfigurationList;
+			buildConfigurations = ( AB72, AB73 );
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB61 = {
+			isa = XCConfigurationList;
+			buildConfigurations = ( AB70, AB71 );
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB60 /* Project object */;
+}
